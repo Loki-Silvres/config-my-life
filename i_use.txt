@@ -1,0 +1,4 @@
+copyq
+anydesk
+zsh
+tmux
