@@ -1,0 +1,110 @@
+
+
+git clone --recursive https://github.com/facebookresearch/RRL.git
+conda env create -f env.yml
+
+conda activate rrl
+
+# Mujoco steup
+
+cd
+mkdir .mujoco/
+cd .mujoco/
+wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
+tar -xvf mujoco210-linux-x86_64.tar.gz
+
+# Put these in ~/.bashrc
+
+export LD_LIBRARY_PATH=/home/loki/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+export PATH="$LD_LIBRARY_PATH:$PATH"
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
+
+source ~/.bashrc
+
+# Test simulation 
+
+cd ~/.mujoco/mujoco210/bin
+./simulate ../model/humanoid.xml
+
+# Install mujoco-py
+
+pip install Cython==3.0.0a10
+sudo apt update
+sudo apt-get install patchelf
+sudo apt-get install python3-dev build-essential libssl-dev libffi-dev libxml2-dev  
+sudo apt-get install libxslt1-dev zlib1g-dev libglew1.5 libglew-dev python3-pip
+
+git clone https://github.com/openai/mujoco-py
+cd mujoco-py
+pip install -r requirements.txt
+pip install -r requirements.dev.txt
+
+pip install -e . --no-cache
+
+# Recommended to roboot system now
+
+sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
+sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so # may already exist
+	
+pip3 install -U 'mujoco-py<2.2,>=2.1'
+
+# Verify installation
+
+cd examples
+python3 setting_state.py
+	
+# mjrl setup
+
+cd ~/RRL
+pip install -e mjrl/.
+
+# mj_envs setup
+
+cd ~/RRL
+
+# open $HOME/RRL/mj_envs/setup.py
+# change line 21 from         
+# 'click', 'gym==0.13', 'mujoco-py<2.1,>=2.0', 'termcolor',
+# to 
+# 'click', 'gym==0.13', 'mujoco-py<2.2,>=2.1', 'termcolor',
+
+
+# what i did and worked: 
+
+# rm -rf mj_envs
+# wget https://github.com/vikashplus/robohive/archive/refs/tags/v0.0.tar.gz
+# tar -xvf v0.0.tar.gz
+# cd mj_envs/dependencies
+# git clone https://github.com/vikashplus/Adroit.git
+
+# Recommended steps:
+
+pip install -e mj_envs/.
+
+# hand_dapg setup
+
+cd ~/RRL
+git clone https://github.com/aravindr93/hand_dapg.git
+
+# Verify installation
+
+cd hand_dapg/dapg
+python utils/visualize_demos.py --env_name relocate-v0
+python utils/visualize_policy.py --env_name relocate-v0 --policy policies/relocate-v0.pickle
+
+# rrl install
+
+cd ~/RRL
+pip install -e .
+
+
+
+# Relevant links:
+
+# https://github.com/vikashplus/robohive/releases/tag/v0.0
+# https://github.com/aravindr93/hand_dapg
+# https://github.com/facebookresearch/RRL
+# https://github.com/vikashplus/Adroit
+# https://www.youtube.com/watch?v=Wnb_fiStFb8
+# https://github.com/openai/mujoco-py/issues/268
