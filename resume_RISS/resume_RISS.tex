@@ -1,0 +1,270 @@
+%-------------------------
+% Resume in Latex
+% Author : Shailesh
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.52in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1in}
+
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6.09pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+{\fontfamily{bch}\selectfont
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Alok Raj}}\\
+  {\faPhone {  +91-8709414158}} & \href{https://www.linkedin.com/in/loki-silvres/}{\faLinkedinSquare  {  Alok Raj}} \\
+  \href{https://github.com/loki-silvres} {\faGithubSquare { Github }}  \href{https://loki-silvres.github.io/} {\faGithubSquare {  Website}} & \href{mailto:alok9360@gmail.com}{\small\faEnvelopeO { alok9360@gmail.com} }\\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology, (IIT ISM) Dhanbad}{Dhanbad, India}
+      {Bachelors of Technology in Computer Science and Engineering; CGPA: 8.70 / 10.00 or 3.48 / 4.00 }{Class of 2026}
+      
+	   
+	    
+    \resumeSubheading
+      {BR DAV Public School}{Begusarai, India}
+      {High School(12th);  Percentage: 97.2\%
+      }{Class of 2022}
+    \resumeSubHeadingListEnd
+
+
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+		{Undergraduate Research Internship}{Remote}
+		{Under   {\href{https://scholar.google.co.in/citations?user=cVdB1iwAAAAJ&hl=en}{Prof. G.C. Nandi}} \& {\href{https://scholar.google.com/citations?user=6tiiQtgAAAAJ&hl=en}{Andrew Melnik}}}{Dec 2024 - Present}
+		\resumeItemListStart
+        \resumeItem{Project}{Using state of the art foundation models(VLMs \& LLMs) to solve robotic manipulation problems.}
+            \begin{description}[font=$\bullet$]
+                \item {Working on precise manipulation in indoor environment relying on robot vision.}
+                \end{description}
+    \resumeItemListEnd
+
+  
+    \resumeSubheading
+    {\href{https://www.clutterbot.com/}{Clutterbot Technologies}}{Bangalore, India}
+    {Machine Learning Intern}{May 2024 - July 2024}
+    \resumeItemListStart
+        \resumeItem{Project}
+          {Modernizing Object Detection with Distillation and Curriculum Learning}
+        \resumeItem{Description}{}
+          \begin{description}[font=$\bullet$]
+            \item {Self-Training, using \href{https://arxiv.org/abs/2211.12860}{Co-DETR}, to expand the dataset with unannotated images.}
+            \item {Curriculum learning trained \href{https://arxiv.org/abs/2211.15444}{DAMO-YOLO-M}, distilled to \href{https://arxiv.org/abs/2211.15444}{DAMO-YOLO-Tiny }for robot deployment.}
+            \item {Improved mAP50 from 34\% to 42\% and evaluated performance with \href{https://arxiv.org/abs/2008.08115} {TIDE}.}
+            \item {Deployed on robot using Nvidia DeepStream and integrated with ROS2.}
+            \end{description}
+      \resumeItemListEnd
+
+     \resumeSubheading
+    {\href{https://nvcti.iitism.ac.in/}{NVCTI, IIT(ISM)}}{Dhanbad, India}
+    {Minor in Product Development Internship}{Feb 2024 - Jan 2025}
+    \resumeItemListStart
+        \resumeItem{Project}
+          {Automating the process of road-marking with Computer Vision and Robotics.}
+        \resumeItem{Description}{}
+          \begin{description}[font=$\bullet$]
+            \item {Designed a lane detection algorithm to guide the robot on roads.}
+            \item {Created with a robot prototype for testing of effective lane following.}
+            \item {Incorporated a spraying mechanism for marking roads.}
+            \end{description}
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {\href{https://www.aduza.in/about-us/}{Robotics and Automation Lab, IIT (ISM)} \normalfont\color{blue}\href{https://youtu.be/RTfxgl5l3NM}{[video]}}{Dhanbad, India}
+    {Research Intern: Under   {\href{https://scholar.google.com/citations?user=T1LKSLwAAAAJ&hl=en}{Prof. Arun Dayal Udai}}}{December 2023}
+    \resumeItemListStart
+        \resumeItem{Project}
+          {Development of in-house Quadrupedal Robot for Mining Application.}
+        \resumeItem{Work on Quadrupedal Robot}{}
+          \begin{description}[font=$\bullet$]
+            \item {Developed ROS based framework for a in-house developed Quadrupedal Robot. }
+            \item {Reinforcement Learning based control policy.}
+            \item {Hardware testing of locomotion controller.}
+            \end{description}
+    
+
+      \resumeItemListEnd
+
+     
+
+\resumeSubHeadingListEnd
+
+%-----------Projects-----------------
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Mobile-Swarm-Navigation \color{blue} \normalfont \fontfamily{pcr} \href{https://drive.google.com/drive/folders/1R-KmugCW5OYquV0uMlaHNyM6oqgc6VKU}{[video folder]} \color{blue} \normalfont \fontfamily{pcr} \href{https://github.com/Loki-Silvres/Mobile-Swarm-Navigation}{[code]}} {}
+    {Inter-IIT Tech Meet 13.0 - BharatForge}{Nov 2024 - Dec 2024}
+          \begin{description}[font=$\cdot$]
+            \item {\textbf{Project}: Create a \href{https://interiit-tech.com/wp-content/uploads/2024/11/BharatForge_MidPrep_InterIIT_TechMeet.pdf}{Centralised Intelligence for Dynamic Swarm Navigation}.}
+            \item {Scalable ROS2 based robot swarm for autonomous exploration and navigation in a dynamic environment.}
+            \item {Dynamic semantic environmental mapping with Instance Segmentation and Stereo Depth.}
+            \item {Semantic database management system for task allocation for the swarm.}
+            \end{description}
+
+    \resumeSubheading
+    {Autonomous Driving NXP-B3RB Buggy \color{blue} \normalfont \fontfamily{pcr} \href{https://loki-silvres.github.io/projects/1_project/}{[link]}}{}
+    {NXP-AIM Self Driving Car Design Challenge: Under {\href{https://scholar.google.co.in/citations?user=4Uc5kc0AAAAJ&hl=en}{Prof. Subhrangsu Mandal}}}{Aug 2024 -  Oct 2024}
+          \begin{description}[font=$\cdot$]
+            \item {Developed an autonomous driving system, for a B3RB-buggy, achieving a 1:42 (min:sec) track time.}
+            \item {Integrated LiDAR and camera for lane detection, obstacle avoidance, and traffic sign recognition.}
+            \item {Trained YOLOv5s, optimized with INT8 quantization for NPU, achieving real-time 7 Hz inference.}
+            \item {Utilized a mini computer running ROS2 for onboard processing and control.}
+            \end{description}
+  
+    \resumeSubheading
+    {Hologlyph Bots \color{blue} \normalfont \fontfamily{pcr} \href{https://www.youtube.com/watch?v=puT0LCRGoLM}{[video]} 
+    \color{blue} \normalfont \fontfamily{pcr} \href{https://github.com/Loki-Silvres/Hologlyph-Bots}{[code]}} {}
+    {E-Yantra 2023}{Aug 2023 -  Jan 2024}
+          \begin{description}[font=$\cdot$]
+            \item {Simulated a 3-bot swarm in Gazebo with overhead camera-based arena monitoring.}
+            \item {Designed and 3D-printed bots in SolidWorks with three design iterations.}
+            \item {Integrated inverse kinematics for a 3-wheeled holonomic drive using servos.}
+            \item {Implemented Aruco detection for pen pose tracking in the arena.}
+            \item {Developed PID control with camera feedback; used ESP-32 as a ROS2 node via Micro-ROS.}
+            \end{description}
+
+
+    \vspace{-30pt}
+    \resumeSubHeadingListEnd
+    %--------PROGRAMMING SKILLS------------
+    \section{Skills}
+    	\resumeSubHeadingListStart
+     
+    	\resumeSubItem
+     {Programming}
+     {C++, Python, MATLAB, Linux, Git, SQL, SSH}
+     
+    	\resumeSubItem
+     {Simulation/Visualization}
+     {Isaac Gym, Gazebo, RViz, CoppeliaSim, Mujoco, Sapien}
+    
+     \resumeSubItem
+     {Frameworks/Libraries}
+     {ROS/ROS2, RViz, PyTorch, OpenCV, Matplotlib}
+     
+     \resumeSubItem
+     {Hardware}
+     {Yashkawa Arm, Nvidia Jetson, Depth Camera, 2D LIDAR, Dynamixel Actuators, RaspberryPi}
+    
+    \resumeSubHeadingListEnd
+    %-----------Coursework-----------------
+    \section{Relevant Coursework}
+        \resumeSubHeadingListStart
+
+    	 \resumeSubItem
+         {Mechatronics}
+         {Engineering Mechanics, Analog Interface Electronics}
+        
+         \resumeSubItem
+         {Software}
+         {Reinforcement Learning, Self-Supervised Learning, Convolutional Neural Networks, Transformers, Data Structure \& Algorithm}
+        
+    \resumeSubHeadingListEnd
+
+    %-----------Awards-----------------
+    \section{Honors and Awards}
+    \begin{description}[font=$\bullet$]
+    \item {6th Position: InterIIT Tech Meet 13.0 for Rigbettlelabs} 
+    \item {Winner: NXP-AIM Regional Finale}
+    \item {3rd Position: Robowars(BattleBots) at TechKriti 2024 (Annual Tech Fest of IIT Kanpur)}
+    \item {3rd Position: Robowars(BattleBots) at Concetto 2024 (Annual Tech Fest of IIT Dhanbad)}
+    \item {Received the Excellent Academic Performance Award (AISSCE 2022).}
+    \end{description}
+    %-------------------------------------------
+
+    %-----------Extra-Curricular-----------------
+    \section{Extra-Curricular Activities}
+    \begin{description}[font=$\bullet$]
+    \resumeSubItem{Club Coordinator}{RoboISM - The official Robotics and AI club of IIT ISM Dhanbad. }
+     \resumeSubItem{Joint Event Coordinator}{NVCTI - The innovation cell of IIT ISM Dhanbad. }
+     \resumeSubItem{Hobbies}{Guitar, Chess, Badminton.}
+    \end{description}
+    %-------------------------------------------
+    
+}
+\end{document}
